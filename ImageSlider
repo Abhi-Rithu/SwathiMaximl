@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<title>Image Slider</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<h2 class="center">Avengers avenue</h2>
+
+<div class="content display-container">
+  <img class="mySlides" src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjS773zyIHjAhWUUn0KHel7BMMQjRx6BAgBEAU&url=https%3A%2F%2Fmarvel-movies.fandom.com%2Fwiki%2FAvengers_(team)&psig=AOvVaw13M6jLkFVXzV9KbZb4eQI2&ust=1561446839348536" style="width:100%">
+  <img class="mySlides" src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwi7__j-yIHjAhUPA3IKHWzSCecQjRx6BAgBEAU&url=https%3A%2F%2Fwww.gamesradar.com%2Favengers-endgame-review%2F&psig=AOvVaw13M6jLkFVXzV9KbZb4eQI2&ust=1561446839348536" style="width:100%">
+  <img class="mySlides" src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjDsvSGyYHjAhWPfCsKHfr-CMUQjRx6BAgBEAU&url=https%3A%2F%2Fmovieweb.com%2Favengers-4-rumor-original-team-fate%2F&psig=AOvVaw13M6jLkFVXzV9KbZb4eQI2&ust=1561446839348536" style="width:100%">
+  <img class="mySlides" src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjr2ZiOyYHjAhWUe30KHWqoAasQjRx6BAgBEAU&url=https%3A%2F%2Fmovieweb.com%2Favengers-endgame-directors-new-social-media-profiles%2F&psig=AOvVaw13M6jLkFVXzV9KbZb4eQI2&ust=1561446839348536" style="width:100%">
+
+  <button class="button black display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="button black display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
